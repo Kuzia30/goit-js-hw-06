@@ -16,8 +16,8 @@ array.forEach(outputInConsole)
 function outputInConsole(category) {
 const categoryTitle = category.firstElementChild.textContent;
 const categoryTotalElements = category.lastElementChild.children.length;
-return console.log(`Category: ${categoryTitle}
-Elements: ${categoryTotalElements}`)
+console.log(`Category: ${categoryTitle}`)
+console.log(`Elements: ${categoryTotalElements}`)
 }
 }
 
