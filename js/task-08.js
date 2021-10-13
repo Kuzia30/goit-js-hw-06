@@ -10,7 +10,7 @@ function onFormSubmit(event) {
          const formData = {
         email: email.value,
         password: password.value
-         }
+        }
         
         console.log(formData);
         event.currentTarget.reset();

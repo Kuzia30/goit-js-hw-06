@@ -30,3 +30,8 @@ button {
   display: flex;
   justify-content: space-between;
 }
+.box-wrap {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 1px solid tomato;
+}
