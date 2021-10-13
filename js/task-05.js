@@ -1,8 +1,8 @@
 const inputText = document.querySelector('#name-input');
 const outputText = document.querySelector('#name-output');
-inputText.addEventListener("input", onAddText);
+inputText.addEventListener("input", onTextAdd);
 
-function onAddText(event) {
+function onTextAdd(event) {
     if (event.currentTarget.value !== "") {
         outputText.textContent = event.currentTarget.value;
     } else {
