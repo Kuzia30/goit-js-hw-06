@@ -19,7 +19,8 @@ function onAmountOut(event) {
 }
 
 createBtn.addEventListener('click', () => {
-createBoxes(totalAmount)
+  createBoxes(totalAmount);
+  inputEl.value = ""
 })
 
 
@@ -27,8 +28,8 @@ function createBoxes(amount) {
 
   for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement('div');
-    box.style.width = (30 + (i * 10)) + "px" ;
-    box.style.height = (30 + (i * 10)) + "px";
+    box.style.width = (20 + (i * 10)) + "px" ;
+    box.style.height = (20 + (i * 10)) + "px";
     box.style.backgroundColor = getRandomHexColor();
     boxesWrapEl.append(box);
   }
