@@ -7,10 +7,12 @@ const inputEl = controlsWrapEl.firstElementChild;
 const createBtn = document.querySelector('button[data-create]');
 const destroyBtn = document.querySelector('button[data-destroy]');
 const boxesWrapEl = document.querySelector('#boxes');
+let totalAmount = 0;
+let size = 20;
 
 boxesWrapEl.classList.add("box-wrap")
 
-let totalAmount = 0;
+
 
 inputEl.addEventListener('input', onAmountOut);
 
@@ -23,7 +25,7 @@ createBtn.addEventListener('click', () => {
   inputEl.value = ""
 })
 
-let size = 20;
+
 function createBoxes(amount) {
   for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement('div');
