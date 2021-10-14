@@ -23,16 +23,18 @@ createBtn.addEventListener('click', () => {
   inputEl.value = ""
 })
 
-
+let size = 20;
 function createBoxes(amount) {
-
   for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement('div');
-    box.style.width = (20 + (i * 10)) + "px" ;
-    box.style.height = (20 + (i * 10)) + "px";
-    box.style.backgroundColor = getRandomHexColor();
+    const styleBox = box.style;
+    size = size + 10;
+    styleBox.width = size + "px" ;
+    styleBox.height = size  + "px";
+    styleBox.backgroundColor = getRandomHexColor();
     boxesWrapEl.append(box);
   }
+
 }
 
 
@@ -40,5 +42,8 @@ destroyBtn.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
   const arrayBoxes = [...boxesWrapEl.children];
-  arrayBoxes.forEach(box => {box.remove()})
+  arrayBoxes.forEach(box => {
+    box.remove();
+    size = 20;
+  })
   }
