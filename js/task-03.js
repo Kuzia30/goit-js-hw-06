@@ -15,6 +15,8 @@ const images = [
 
 
 const listGallery = document.querySelector('.gallery');
-const murkup = images.map(({url, alt}) => `<li class="list-item"><img src="${url}" alt="${alt}"></li>`
-)
+const murkup = images
+  .map(({ url, alt }) => `<li class="list-item"><img src="${url}" alt="${alt}"></li>`)
+  .join("");
+  console.log(murkup);
 listGallery.insertAdjacentHTML("afterbegin", murkup)
